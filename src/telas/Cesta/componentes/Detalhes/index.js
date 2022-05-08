@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
 
 import * as Estilos from './estilos';
 
-import DetalhesFazenda from '../DetalhesFazenda';
 import Texto from '../../../../componentes/Texto';
+import Botao from '../../../../componentes/Botao';
+
+import DetalhesFazenda from '../DetalhesFazenda';
 
 const Detalhes = ({ nome, descricao, preco, botao, fazenda }) => {
     return (
@@ -17,9 +19,7 @@ const Detalhes = ({ nome, descricao, preco, botao, fazenda }) => {
 
             <Texto style={Estilos.preco}>{preco}</Texto>
 
-            <TouchableOpacity style={Estilos.botao} onPress={() => {}}>
-                <Texto style={Estilos.textoBotao}>{botao}</Texto>
-            </TouchableOpacity>
+            <Botao>{botao}</Botao>
         </View>
     );
 };

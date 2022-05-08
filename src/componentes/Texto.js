@@ -1,7 +1,7 @@
 import React from 'react';
-import * as ReactNative from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
-const estilos = ReactNative.StyleSheet.create({
+const estilos = StyleSheet.create({
     texto: {
         fontFamily: "MontserratRegular",
     },
@@ -16,7 +16,7 @@ const Texto = ({ children, style = {} }) => {
     const estiloTexto =
         fontWeight === "bold" || fontWeight === "600" ? estilos.textoNegrito : estilos.texto;
 
-    return <ReactNative.Text style={[estilosProp, estiloTexto]}>{children}</ReactNative.Text>
+    return <Text style={[estilosProp, estiloTexto]}>{children}</Text>
 };
 
 export default Texto;

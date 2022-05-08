@@ -25,20 +25,3 @@ export const preco = StyleSheet.create({
     lineHeight: 42,
     color: "#2A9F85",
 });
-
-export const botao = StyleSheet.create({
-    width: "100%",
-    paddingVertical: 16,
-    borderRadius: 6,
-    marginTop: 16,
-    backgroundColor: "#2A9F85",
-});
-
-export const textoBotao = StyleSheet.create({
-    width: "100%",
-    fontSize: 16,
-    fontWeight: "bold",
-    textAlign: "center",
-    lineHeight: 26,
-    color: "#FFF",
-});
