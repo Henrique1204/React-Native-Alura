@@ -29,7 +29,7 @@ const estilos = ReactNative.StyleSheet.create({
     },
     nome: {
         fontSize: 26,
-        fontWeight: "bold",
+        fontFamily: "MontserratBold",
         lineHeight: 42,
         color: "#464646",
     },
@@ -45,6 +45,7 @@ const estilos = ReactNative.StyleSheet.create({
     nomeFazenda: {
         fontSize: 16,
         lineHeight: 26,
+        fontFamily: "MontserratRegular",
     },
     descricao: {
         fontSize: 16,
