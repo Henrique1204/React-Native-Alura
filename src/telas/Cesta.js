@@ -1,6 +1,8 @@
 import React from 'react';
 import * as ReactNative from 'react-native';
 
+import Texto from '../componentes/Texto';
+
 import Topo from '../../assets/topo.png';
 import Logo from '../../assets/logo.png';
 
@@ -16,9 +18,9 @@ const estilos = ReactNative.StyleSheet.create({
     titulo: {
         width: "100%",
         padding: 16,
-        textAlign: "center",
         fontSize: 16,
         fontWeight: "bold",
+        textAlign: "center",
         lineHeight: 26,
         color: "white",
         position: "absolute",
@@ -29,7 +31,7 @@ const estilos = ReactNative.StyleSheet.create({
     },
     nome: {
         fontSize: 26,
-        fontFamily: "MontserratBold",
+        fontWeight: "bold",
         lineHeight: 42,
         color: "#464646",
     },
@@ -45,7 +47,6 @@ const estilos = ReactNative.StyleSheet.create({
     nomeFazenda: {
         fontSize: 16,
         lineHeight: 26,
-        fontFamily: "MontserratRegular",
     },
     descricao: {
         fontSize: 16,
@@ -66,21 +67,21 @@ const Cesta = () => {
         <>
             <ReactNative.Image source={Topo} style={estilos.topo} />
 
-            <ReactNative.Text style={estilos.titulo}>Detalhe da cesta</ReactNative.Text>
+            <Texto style={estilos.titulo}>Detalhe da cesta</Texto>
 
             <ReactNative.View style={estilos.cestaContainer}>
-                <ReactNative.Text style={estilos.nome}>Cesta de Verduras</ReactNative.Text>
+                <Texto style={estilos.nome}>Cesta de Verduras</Texto>
 
                 <ReactNative.View style={estilos.fazendaContainer}>
                     <ReactNative.Image style={estilos.logoFazenda} source={Logo} />
-                    <ReactNative.Text style={estilos.nomeFazenda}>Jenny Jack Farm</ReactNative.Text>
+                    <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>
                 </ReactNative.View>
 
-                <ReactNative.Text style={estilos.descricao}>
+                <Texto style={estilos.descricao}>
                     Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha.
-                </ReactNative.Text>
+                </Texto>
 
-                <ReactNative.Text style={estilos.preco}>R$ 40,00</ReactNative.Text>
+                <Texto style={estilos.preco}>R$ 40,00</Texto>
             </ReactNative.View>
         </>
     );
