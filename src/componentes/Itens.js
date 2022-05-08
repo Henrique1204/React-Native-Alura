@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, FlatList } from 'react-native';
 
 import Texto from './Texto';
 
 const estilos = StyleSheet.create({
     titulo: {
+        paddingHorizontal: 16,
         marginTop: 32,
         marginBottom: 8,
         fontSize: 20,
@@ -13,7 +14,7 @@ const estilos = StyleSheet.create({
         color: "#464646",
     },
     item: {
-        paddingVertical: 16,
+        padding: 16,
         borderBottomWidth: 1,
         borderBottomColor: "#ECECEC",
         flexDirection: "row",
@@ -31,19 +32,30 @@ const estilos = StyleSheet.create({
     }
 });
 
-const Itens = ({ titulo, lista }) => {
+const Item = ({ item: { nome, imagem } }) => {
     return (
-        <>
-            <Texto style={estilos.titulo}>{titulo}</Texto>
+        <View style={estilos.item}>
+            <Image source={imagem}  style={estilos.itemImagem} />
 
-            {lista.map(({ nome, imagem }, key) => (
-                <View key={`${nome}_${key}`} style={estilos.item}>
-                    <Image source={imagem}  style={estilos.itemImagem} />
+            <Texto style={estilos.itemNome}>{nome}</Texto>
+        </View>
+    );
+};
 
-                    <Texto style={estilos.itemNome}>{nome}</Texto>
-                </View>
-            ))}
-        </>
+const Itens = ({ titulo, lista, children }) => {
+    return (
+        <FlatList
+            data={lista}
+            renderItem={Item}
+            keyExtractor={({ nome }) => nome}
+            ListHeaderComponent={() => (
+                <>
+                    {children}
+
+                    <Texto style={estilos.titulo}>{titulo}</Texto>
+                </>
+            )}
+        />
     );
 };
 

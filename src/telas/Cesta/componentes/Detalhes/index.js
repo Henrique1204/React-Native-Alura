@@ -8,7 +8,7 @@ import Botao from '../../../../componentes/Botao';
 
 import DetalhesFazenda from '../DetalhesFazenda';
 
-const Detalhes = ({ nome, descricao, preco, botao, fazenda, children }) => {
+const Detalhes = ({ nome, descricao, preco, botao, fazenda }) => {
     return (
         <View style={Estilos.container}>
             <Texto style={Estilos.nome}>{nome}</Texto>
@@ -20,8 +20,6 @@ const Detalhes = ({ nome, descricao, preco, botao, fazenda, children }) => {
             <Texto style={Estilos.preco}>{preco}</Texto>
 
             <Botao>{botao}</Botao>
-
-            {children}
         </View>
     );
 };

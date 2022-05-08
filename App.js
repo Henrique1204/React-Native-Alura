@@ -16,7 +16,7 @@ const App = () => {
   if (!fonteCarregada) return <AppLoading />;
 
   return (
-    <ReactNative.SafeAreaView>
+    <ReactNative.SafeAreaView style={{ flex: 1 }}>
       <ReactNative.StatusBar style="auto" />
 
       <Cesta {...mock} />
