@@ -1,8 +1,10 @@
 import React from 'react';
 import * as ReactNative from 'react-native';
 import * as FonteMontserrat from '@expo-google-fonts/montserrat';
+import AppLoading from 'expo-app-loading';
 
 import Cesta from './src/telas/Cesta';
+import mock from './src/mocks/cesta';
 
 const App = () => {
   const [fonteCarregada] = FonteMontserrat.useFonts({
@@ -11,13 +13,13 @@ const App = () => {
     "MontserratBold": FonteMontserrat.Montserrat_700Bold,
   });
 
-  if (!fonteCarregada) return <ReactNative.View />;
+  if (!fonteCarregada) return <AppLoading />;
 
   return (
     <ReactNative.SafeAreaView>
       <ReactNative.StatusBar style="auto" />
 
-      <Cesta />
+      <Cesta {...mock} />
     </ReactNative.SafeAreaView>
   );
 };

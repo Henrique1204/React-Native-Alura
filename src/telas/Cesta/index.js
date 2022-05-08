@@ -3,12 +3,12 @@ import React from 'react';
 import Topo from './componentes/Topo';
 import Detalhes from './componentes/Detalhes';
 
-const Cesta = () => {
+const Cesta = ({ topo, detalhes, fazenda }) => {
     return (
         <>
-            <Topo />
+            <Topo {...topo} />
 
-            <Detalhes />
+            <Detalhes {...{ ...detalhes, fazenda }}  />
         </>
     );
 };
