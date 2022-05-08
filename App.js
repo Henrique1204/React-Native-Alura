@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { StatusBar } from 'expo-status-bar';
-import { View } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 
 import Cesta from './src/telas/cesta';
 
 const App = () => {
   return (
-    <View>
-      <Cesta />
+    <SafeAreaView>
       <StatusBar style="auto" />
-    </View>
+
+      <Cesta />
+    </SafeAreaView>
   );
 };
 
