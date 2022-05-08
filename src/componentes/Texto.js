@@ -12,7 +12,9 @@ const estilos = ReactNative.StyleSheet.create({
 
 const Texto = ({ children, style = {} }) => {
     const { fontWeight, ...estilosProp } = style;
-    const estiloTexto = fontWeight === "bold" ? estilos.textoNegrito : estilos.texto;
+    
+    const estiloTexto =
+        fontWeight === "bold" || fontWeight === "600" ? estilos.textoNegrito : estilos.texto;
 
     return <ReactNative.Text style={[estilosProp, estiloTexto]}>{children}</ReactNative.Text>
 };
