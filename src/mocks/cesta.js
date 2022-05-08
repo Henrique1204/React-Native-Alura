@@ -1,4 +1,5 @@
-import logo from '../../assets/logo.png';
+import { logo } from '../../assets';
+import { abobora, batata, brocolis, pepino, tomate } from '../../assets/frutas';
 
 const cesta = {
     topo: {
@@ -12,6 +13,31 @@ const cesta = {
     fazenda: {
         logo,
         nome: "Jenny Jack Farm",
+    },
+    itens: {
+        titulo: "Itens da cesta",
+        lista: [
+        {
+            nome: "Tomate",
+            imagem: tomate,
+        },
+        {
+            nome: "Brócolis",
+            imagem: brocolis,
+        },
+        {
+            nome: "Batata",
+            imagem: batata,
+        },
+        {
+            nome: "Pepino",
+            imagem: pepino,
+        },
+        {
+            nome: "Abóbora",
+            imagem: abobora,
+        }
+        ]
     }
 };
 
